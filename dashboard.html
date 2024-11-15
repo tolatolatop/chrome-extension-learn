@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub助手 - 数据面板</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            margin: 20px;
+            background-color: #f6f8fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+            margin-bottom: 20px;
+        }
+
+        .repo-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .repo-card {
+            background-color: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 16px;
+        }
+
+        .repo-card h3 {
+            margin-top: 0;
+            color: #0969da;
+        }
+
+        .stats {
+            display: flex;
+            gap: 16px;
+            margin-top: 8px;
+            color: #57606a;
+        }
+
+        .timestamp {
+            color: #57606a;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #2da44e;
+            color: white;
+            border: 1px solid rgba(27, 31, 36, 0.15);
+            border-radius: 6px;
+            padding: 5px 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2c974b;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #57606a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>GitHub助手 - 数据面板</h1>
+            <div class="controls">
+                <button id="refreshButton">刷新数据</button>
+                <button id="clearButton">清除所有数据</button>
+            </div>
+        </div>
+        <div id="repoList" class="repo-list">
+            <!-- 仓库数据将在这里动态显示 -->
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
