@@ -4,8 +4,7 @@
     "version": "1.0",
     "description": "GitHub和Bluesky页面助手",
     "permissions": [
-        "storage",
-        "activeTab"
+        "storage"
     ],
     "host_permissions": [
         "https://github.com/*",
@@ -24,7 +23,21 @@
                 "https://bsky.app/*"
             ],
             "js": [
+                "injector.js",
+                "ajax-hooks.js",
                 "content.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "page-script.js"
+            ],
+            "matches": [
+                "https://github.com/*",
+                "https://bsky.app/*"
             ]
         }
     ],
