@@ -1,14 +1,15 @@
 {
     "manifest_version": 3,
-    "name": "我的GitHub助手",
+    "name": "我的社交助手",
     "version": "1.0",
-    "description": "GitHub页面助手",
+    "description": "GitHub和Bluesky页面助手",
     "permissions": [
         "storage",
         "activeTab"
     ],
     "host_permissions": [
-        "https://github.com/*"
+        "https://github.com/*",
+        "https://bsky.app/*"
     ],
     "action": {
         "default_popup": "popup.html"
@@ -19,7 +20,8 @@
     "content_scripts": [
         {
             "matches": [
-                "https://github.com/*"
+                "https://github.com/*",
+                "https://bsky.app/*"
             ],
             "js": [
                 "content.js"
